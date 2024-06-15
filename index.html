@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Eugenio's Entertainment Marketing Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id="wrapper">
+      <div id="canvas_container"></div>
+
+      <div class="text">
+        <p class="quoteText">
+          “ Welcome to Eugenio's Entertainment Marketing Management.”<br />
+          <span style="font-style: italic; font-size: 1.4rem; color: #ed760d">
+            #We bring the best experiences to your Business
+          </span>
+        </p>
+      </div>
+      <p class="clickInfo">click anywhere to start journey</p>
+
+      <img
+        id="first"
+        src="https://i.imgur.com/hDB2Egy.jpg"
+        style="display: none"
+      />
+
+      <a
+        href="https://linkedin.com/in/dr-eugenio-dalli-cardillo-15781b55"
+        target="_blank"
+        class="btn btn_works"
+        >My Works</a
+      >
+      <button class="btn" id="fullscr">Go Fullscreen</button>
+
+      <!-- Add the audio element -->
+      <audio
+        id="background-audio"
+        src="Klangkarussell - Eistee-aus-der Dose.mp3"
+        loop
+      ></audio>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+    <script src="./script.js"></script>
+
+    <!-- JavaScript to autoplay the audio -->
+    <script>
+      document.addEventListener("click", function () {
+        var audio = document.getElementById("background-audio");
+        audio.play().catch(function (error) {
+          console.log("Playback was prevented:", error);
+        });
+      });
+    </script>
+  </body>
+</html>
